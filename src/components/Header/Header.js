@@ -24,7 +24,7 @@ const Header = () => {
           <DesktopLogoWrapper>
             <Logo />
           </DesktopLogoWrapper>
-          <ActionGroup>
+          <ActionGroup style={{ '--justify': 'end' }}>
             <DesktopAction>
                 <SubscribeButton>
                     Subscribe
@@ -57,18 +57,25 @@ const SuperHeader = styled.div`
     background: revert;
     color: var(--color-gray-900);
     margin-top: 16px;
-    margin-bottom: 74px;
+    margin-bottom: 72px;
   }
 `;
 
 const Row = styled(MaxWidthWrapper)`
   display: flex;
   justify-content: space-between;
+
+  @media${QUERIES.laptopAndUp} {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr auto 1fr;
+  }
 `;
 
 const ActionGroup = styled.div`
   display: flex;
   gap: 24px;
+  justify-content: var(--justify);
 
   /*
     FIX: Remove the inline spacing that comes with
@@ -86,6 +93,10 @@ const MainHeader = styled(MaxWidthWrapper)`
   margin-top: 32px;
   margin-bottom: 48px;
 
+  @media ${QUERIES.tabletAndUp} {
+    margin-bottom: 72px;
+  }
+
   @media ${QUERIES.laptopAndUp} {
     display: none;
   }
@@ -102,7 +113,6 @@ const DesktopLogoWrapper = styled.div`
 
   @media ${QUERIES.laptopAndUp} {
     display: revert;
-    font-size: 4rem;
   }
 `;
 
