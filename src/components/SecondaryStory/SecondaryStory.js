@@ -43,6 +43,7 @@ const Heading = styled.h2`
 
 const Abstract = styled.p`
   grid-area: abstract;
+  align-self: start
   font-size: 1rem;
   white-space: pre-wrap;
   display: -webkit-box;
