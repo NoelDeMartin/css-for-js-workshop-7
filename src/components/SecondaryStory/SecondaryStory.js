@@ -23,19 +23,12 @@ const Wrapper = styled.article`
   grid-template-columns: 120px 1fr;
   color: var(--color-gray-900);
 
-  @media ${QUERIES.tabletAndUp} {
+  @media ${QUERIES.tabletOnly} {
     grid-template-areas:
       'image'
       'heading'
       'abstract';
     grid-template-columns: 1fr;
-  }
-
-  @media ${QUERIES.desktopAndUp} {
-    grid-template-areas:
-      'image heading'
-      'image abstract';
-    grid-template-columns: 120px 1fr;
   }
 `;
 
