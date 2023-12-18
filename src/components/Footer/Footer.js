@@ -153,7 +153,7 @@ const TopRow = styled.div`
   }
 
   @media ${QUERIES.laptopAndUp} {
-    justify-content: end;
+    justify-content: flex-end;
   }
 `;
 
@@ -184,14 +184,8 @@ const MainNavArea = styled.div`
 
   @media ${QUERIES.tabletAndUp} {
     display: grid;
-    gap: 32px 85px;
-    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
     text-align: start;
-  }
-
-  @media ${QUERIES.laptopAndUp} {
-    gap: 0;
-    grid-template-columns: repeat(4, 1fr);
   }
 `;
 
@@ -219,6 +213,10 @@ const Subfooter = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media ${QUERIES.laptopAndUp} {
+    align-items: flex-start;
+  }
 `;
 
 const Logo = styled.a`
